@@ -1,0 +1,13 @@
+Cho 2 bảng dữ liệu sau. Mô tả dữ liệu như hình.  Sử dụng Python hãy thực hiện yêu cầu sau đây:
+Dữ liệu được cung cấp là file dữ liệu gồm:
+• Dữ liệu bảng fact chi tiêu thẻ fact.csv;
+• Dữ liệu bảng tham chiếu về thông tin dư nợ thẻ dim.csv;
+• Dữ liệu metadata các trường.
+• Các dữ liệu về số thẻ,số định danh KH đã được mã hóa nhưng có thể join giữa các bảng thông qua thông tin mã hóa.
+Trong phạm vi bài test, các khách hàng có nghi vấn thực hiện hành vi đáo hạn thẻ khi thỏa các ràng buộc sau
+1. Có dư nợ sao kê ở kỳ thanh toán(lớn hơn hoặc bằng 90% so với hạn mức).
+2. Thực hiện thanh toán hết dư nợ và thực hiện hành vi chi tiêu thẻ (một giao dịch hoặc tách thành nhiều giao dịch) ngay sau khi thanh toán dư nợ thẻ tín dụng với số tiền giao dịch xấp xỉ dư nợ sao kê vừa thanh toán, diễn ra trong vòng 30 phút sau khi thanh toán dư nợ.
+3. Đối với thẻ EVO, kỳ sao kê tại kì X được tính vào 22 tháng X-1  đến 21 tháng X, ngày thanh toán cuối cùng cho kỳ sao kê là ngày 5 tháng X+1.
+Yêu cầu: Hãy thực hiện viết truy vấn để tìm kiếm các khách hàng nghi ngờ là có hành vi đáo hạn thẻ tín dụng (nộp lại bảng kết quả và câu truy vấn, nêu rõ ngôn ngữ sử dụng). Ouput có dạng
+|| CIF HASH || CARD NBR HASH || IS DAO HAN ||
+Trong đó CIF HASH, CARD NBR HASH là các trường thông tin được cung cấp, IS DAO HAN nhận hai giá trị là 0 (không đáo hạn) và 1 (có đáo hạn tại bất kỳ kỳ sao kê nào trên dữ liệu quá khứ).
